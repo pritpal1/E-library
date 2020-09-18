@@ -1,0 +1,13 @@
+{% include 'base.html' %}
+{% load crispy_forms_tags %}
+{% comment %} {% extends '' %} {% endcomment %}
+<div class="container mx-2">
+<h1>Create the New Book</h1>
+<form method="POST" >{% csrf_token %}
+<!--{{form.as_p}} -->
+{{form|crispy}}
+<br>
+<input class="btn btn-primary" type="submit" value="Create">
+
+</form>
+</div>

@@ -1,0 +1,19 @@
+{% include 'base.html' %}
+
+
+{% block body %}
+
+<div class="container mx-2">
+<h1>In Book List View</h1>
+{% for book in form  %}
+    <li type="1">
+    {{book.name }} 
+    <a class="btn btn-primary" href='/detail/{{book.id}}'>Detail</a>
+    <a class="btn btn-success" href='/update/{{book.id}}'> Update</a>
+    <a class="btn btn-danger" href='/delete/{{book.id}}'> Delete</a>
+    </li><br>
+
+{% endfor %}
+</div>
+{% endblock body %}
+
